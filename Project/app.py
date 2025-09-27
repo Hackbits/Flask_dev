@@ -22,9 +22,9 @@ def resources():
 def pricing():
     return render_template("pricing.html")
 
-@app.route("/for_developers")
+@app.route("/for-developers")
 def for_developers():
-    return render_template("for_developers.html")
+    return render_template("for-developers.html")
 
 @app.route("/login")
 def login():
