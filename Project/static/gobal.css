@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  padding: 10px 50px;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav__left .logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__links a {
+  color: black;
+  transition: all 0.3s ease-in-out;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav__links a:hover {
+  background-color: rgb(0, 224, 0);
+  color: white;
+}
+
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__right input {
+  padding: 10px 15px;
+  background-color: rgb(234, 234, 234);
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+.nav__right .login {
+  padding: 10px 15px;
+  color: black;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.nav__right .login:hover {
+  background-color: rgba(0, 255, 0, 0.362);
+  color: rgb(0, 123, 0);
+}
+
+.nav__right .signup {
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav__right .signup:hover {
+  background-color: rgb(67, 67, 67);
+  color: rgb(255, 255, 255);
+}
+
+main {
+  padding: 40px 50px;
+}
+
+#content {
+  text-align: center;
+}
+
+#content h3 {
+  color: rgb(0, 235, 0);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+#content p {
+  color: gray;
+  line-height: 1.5;
+}
