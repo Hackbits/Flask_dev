@@ -1,9 +1,17 @@
-{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+{% extends "base.html" %} {% block title %}Log In{% endblock %} {% block content
 %}
-<h2>Login</h2>
+<h2>Log In</h2>
 <form>
-  <input type="text" name="Email" id="Email" placeholder="Email" /> <br />
-  <input type="password" name="Password" id="Password" placeholder="Password" />
+  <input type="text" name="Email" id="Email" placeholder="Email" required />
+  <br />
+  <input
+    type="password"
+    name="Password"
+    id="Password"
+    placeholder="Password"
+    required
+    minlength="8"
+  />
   <br />
   <button type="submit">Login</button>
 </form>
