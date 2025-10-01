@@ -2,40 +2,42 @@
 %}
 <style>
   .login-container {
-    max-width: 400px;
+    max-width: 600px;
     height: 550px;
     margin-left: auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: Arial, sans-serif;
-    background-color: rgb(115, 232, 115);
+    background-color: whitesmoke;
   }
   #Email {
-    width: 30%;
-    height: auto;
-    margin-top: 2%;
-    border: 2px solid #ccc;
+    width: 70%;
+    height: 25px;
+    border: 2px solid black;
     border-radius: 5px;
+    margin: 10px 15%;
   }
   #Password {
-    width: 30%;
-    height: auto;
-    margin-top: 2%;
-    border: 2px solid #ccc;
+    width: 70%;
+    height: 25px;
+    border: 2px solid black;
     border-radius: 5px;
+    margin: 5px 15%;
   }
   #login-button {
-    width: 15%;
-    height: auto;
-    border: 1px solid black;
+    width: 50%;
+    height: 25px;
+    border: 2px solid black;
     border-radius: 5px;
+    background-color: greenyellow;
+    margin: 5px 25%;
   }
 </style>
 <div class="login-container">
   <h2>Welcome Back!</h2>
   <h2>Login to your account...</h2>
-  <h4>It's Nice to see you again...</h4>
+  <p>It's Nice to see you again...</p>
   <form>
     <input
       type="text"
@@ -55,7 +57,11 @@
     />
     <br />
     <button type="submit" id="login-button">Log In</button>
-    <a href="/forgotpassword">Forgot Password?</a>
+    <a
+      href="/forgotpassword"
+      style="margin-left: 50%; text-decoration: none; color: blue"
+      >Forgot Password?</a
+    >
   </form>
 </div>
 {% endblock %}
