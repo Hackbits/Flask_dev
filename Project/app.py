@@ -33,3 +33,7 @@ def login():
 @app.route("/signup")
 def signup():
     return render_template("signup.html")
+
+@app.route("/forgotpassword")
+def forgotpassword():
+    return render_template("forgotpassword.html")

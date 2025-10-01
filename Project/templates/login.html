@@ -1,18 +1,61 @@
 {% extends "base.html" %} {% block title %}Log In{% endblock %} {% block content
 %}
-<h2>Log In</h2>
-<form>
-  <input type="text" name="Email" id="Email" placeholder="Email" required />
-  <br />
-  <input
-    type="password"
-    name="Password"
-    id="Password"
-    placeholder="Password"
-    required
-    minlength="8"
-  />
-  <br />
-  <button type="submit">Login</button>
-</form>
+<style>
+  .login-container {
+    max-width: 400px;
+    height: 550px;
+    margin-left: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    background-color: rgb(115, 232, 115);
+  }
+  #Email {
+    width: 30%;
+    height: auto;
+    margin-top: 2%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  #Password {
+    width: 30%;
+    height: auto;
+    margin-top: 2%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  #login-button {
+    width: 15%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+</style>
+<div class="login-container">
+  <h2>Welcome Back!</h2>
+  <h2>Login to your account...</h2>
+  <h4>It's Nice to see you again...</h4>
+  <form>
+    <input
+      type="text"
+      name="Email"
+      id="Email"
+      placeholder="Email Or Username"
+      required
+    />
+    <br />
+    <input
+      type="password"
+      name="Password"
+      id="Password"
+      placeholder="Password"
+      required
+      minlength="8"
+    />
+    <br />
+    <button type="submit" id="login-button">Log In</button>
+    <a href="/forgotpassword">Forgot Password?</a>
+  </form>
+</div>
 {% endblock %}
