@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request, redirect, url_for, session, Response
 
 app = Flask(__name__)
 
@@ -26,8 +26,17 @@ def pricing():
 def for_developers():
     return render_template("for-developers.html")
 
-@app.route("/login")
+@app.route("/login", methods = ["GET", "POST"])
 def login():
+    return render_template("login.html")
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        if username == "admin" and password == "12345678":
+            session["user"] = username
+            return redirect(url_for("home"))
+        else:
+            return render_template("login.html", error="Invalid credentials")
     return render_template("login.html")
 
 @app.route("/signup")

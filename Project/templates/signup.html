@@ -1,11 +1,125 @@
 {% extends "base.html"%} {% block title %} Sign Up{% endblock %} {% block
 content %}
-<h2>Sign Up</h2>
-<form>
-  <input type="text" name="Name" id="Name" placeholder="Name" /> <br />
-  <input type="text" name="Email" id="Email" placeholder="Email" /> <br />
-  <input type="password" name="Password" id="Password" placeholder="Password" />
+<style>
+  .signup-container {
+    max-width: 600px;
+    height: 580px;
+    margin-left: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+  }
+  #Name,
+  #Email,
+  #Password {
+    width: 70%;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px 15%;
+    padding: 10px;
+  }
+  #signUp {
+    width: 50%;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: greenyellow;
+    margin: 5px 25%;
+  }
+  #terms {
+    margin-left: 15%;
+  }
+  #ExistingAccount {
+    text-align: center;
+  }
+</style>
+<div class="signup-container">
+  <h2>Join Us</h2>
+  <h2>Create a HackBits Account</h2>
   <br />
-  <button type="submit">Sign Up</button>
-</form>
+  <p>Be a part of the HackBits community.</p>
+  <form>
+    <input type="text" name="Name" id="Name" placeholder="Full Name" required />
+    <br />
+    <input type="text" name="Email" id="Email" placeholder="Email" required />
+    <br />
+    <input
+      type="password"
+      name="Password"
+      id="Password"
+      placeholder="Password"
+      required
+      minlength="8"
+      maxlength="10"
+    />
+    <br />
+    <input type="checkbox" id="terms" name="terms" required />
+    <label for="terms">I agree to the HackBits Terms and Conditions</label>
+    <br />
+    <button type="submit" id="signUp">Sign Up</button>
+  </form>
+  <br />
+  <p>--------------------------------or------------------------------</p>
+  <br />
+  <div>
+    <button
+      type="submit"
+      style="
+        width: 70%;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: white;
+        margin: 5px 15%;
+      "
+    >
+      Continue with Google
+    </button>
+    <button
+      type="submit"
+      style="
+        width: 20%;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: greenyellow;
+        margin-left: 17%;
+      "
+    >
+      LinkedIn
+    </button>
+    <button
+      type="submit"
+      style="
+        width: 20%;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: greenyellow;
+        margin: 10px;
+      "
+    >
+      Github
+    </button>
+    <button
+      type="submit"
+      style="
+        width: 20%;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: greenyellow;
+        margin: 10px;
+      "
+    >
+      Facebook
+    </button>
+    <p id="ExistingAccount">
+      Already have an account? <a href="/login">Log In</a>
+    </p>
+  </div>
+</div>
 {% endblock %}
